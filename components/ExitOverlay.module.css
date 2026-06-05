@@ -1,0 +1,63 @@
+.dialog {
+  border: none;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  max-width: 100%;
+  width: min(420px, calc(100vw - var(--space-4) * 2));
+  border-radius: var(--radius);
+}
+
+.dialog::backdrop {
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  background: var(--surface);
+  padding: var(--space-5);
+  border-radius: var(--radius);
+}
+
+.title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.hint {
+  margin: 0;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+
+.input {
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-2);
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.dismiss {
+  background: transparent;
+  color: var(--text-dim);
+}
+
+.save {
+  background: var(--accent);
+  color: #0b0e14;
+  font-weight: 600;
+}
+
+.save:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

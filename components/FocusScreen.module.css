@@ -1,0 +1,266 @@
+.focus {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.exit {
+  align-self: flex-start;
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: var(--text-dim);
+  text-decoration: none;
+  min-height: var(--tap);
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.context {
+  margin: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.state {
+  align-self: flex-start;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 2px var(--space-2);
+  border-radius: 999px;
+  background: var(--surface-2);
+  color: var(--text-dim);
+}
+
+.state[data-state="active"] {
+  color: var(--ok);
+}
+.state[data-state="blocked"] {
+  color: var(--danger);
+}
+.state[data-state="parked"] {
+  color: var(--warn);
+}
+.state[data-state="done"] {
+  color: var(--text-dim);
+  text-decoration: line-through;
+}
+
+.anchor {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: var(--space-4);
+}
+
+.anchorLabel {
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.anchorText {
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 0;
+  min-height: var(--tap);
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--text);
+}
+
+.anchorPlaceholder {
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+.anchorInput {
+  resize: vertical;
+  min-height: calc(var(--tap) + 8px);
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2);
+}
+
+.actions button {
+  font-weight: 500;
+}
+
+.actionDone {
+  background: color-mix(in oklab, var(--ok) 18%, var(--surface-2));
+}
+.actionBlocked {
+  background: color-mix(in oklab, var(--danger) 16%, var(--surface-2));
+}
+.actionPark {
+  background: color-mix(in oklab, var(--warn) 16%, var(--surface-2));
+}
+
+.capture {
+  display: flex;
+  flex-direction: column;
+}
+
+.micro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: auto;
+}
+
+.microToggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  border: none;
+  padding: var(--space-2) 0;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
+.microBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.microSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.microHeading {
+  margin: 0;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.microList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.microItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  background: var(--surface);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius);
+}
+
+.microState {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text-dim);
+  flex-shrink: 0;
+}
+.microState[data-state="active"] {
+  background: var(--ok);
+}
+.microState[data-state="blocked"] {
+  background: var(--danger);
+}
+.microState[data-state="parked"] {
+  background: var(--warn);
+}
+
+.microTitle {
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.microCapture {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: var(--surface);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius);
+}
+
+.microCaptureText {
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.microTime {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+.microTimeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.microTimelineItem {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: baseline;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border-radius: 8px;
+}
+
+.microTimelineGlyph {
+  font-size: 0.75rem;
+  width: 14px;
+  text-align: center;
+  color: var(--text-dim);
+}
+.microTimelineGlyph[data-kind="workItemTouched"] { color: var(--accent); }
+.microTimelineGlyph[data-kind="captureAdded"]    { color: var(--warn); }
+.microTimelineGlyph[data-kind="sessionStarted"]  { color: var(--ok); }
+.microTimelineGlyph[data-kind="sessionEnded"]    { color: var(--text-dim); }
+
+.microTimelineLabel {
+  font-size: 0.85rem;
+  color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

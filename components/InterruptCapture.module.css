@@ -1,0 +1,76 @@
+.trigger {
+  min-height: var(--tap);
+  padding: var(--space-2) var(--space-4);
+  background: transparent;
+  border: 1px dashed color-mix(in oklab, var(--text-dim) 50%, transparent);
+  border-radius: var(--radius);
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-align: left;
+}
+
+.trigger:hover {
+  color: var(--text);
+  border-color: var(--text-dim);
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid color-mix(in oklab, var(--warn) 35%, transparent);
+}
+
+.input {
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  background: var(--bg);
+  border: 1px solid color-mix(in oklab, var(--text-dim) 30%, transparent);
+  border-radius: var(--radius);
+  color: var(--text);
+  font: inherit;
+  resize: vertical;
+  min-height: calc(var(--tap) * 1.2);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-2);
+}
+
+.cancel,
+.save {
+  min-height: var(--tap);
+  padding: 0 var(--space-4);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.cancel {
+  background: transparent;
+  color: var(--text-dim);
+}
+
+.save {
+  background: color-mix(in oklab, var(--warn) 25%, var(--surface));
+  color: var(--text);
+  border-color: color-mix(in oklab, var(--warn) 45%, transparent);
+}
+
+.save:disabled,
+.cancel:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
